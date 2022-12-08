@@ -27,6 +27,16 @@ app.get('/', (req, res) => {
 })
 
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "./client/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
+});
+
 
 function verifyJWT(req, res, next) {
   const authHeader = req.headers.authorization;

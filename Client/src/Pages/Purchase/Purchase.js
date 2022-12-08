@@ -93,7 +93,7 @@ const Purchase = () => {
         const userInfo = {
             toolsName, minQuantity, price, name, email, city, address, payment, country, zip
         }
-        const url = `http://localhost:5000/order`;
+        const url = `/order`;
         fetch(url, {
             method: "POST",
             headers: {

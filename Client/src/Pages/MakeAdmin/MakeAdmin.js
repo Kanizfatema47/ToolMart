@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     const [users,setUsers] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/adminusers",{
+        fetch("/adminusers",{
             method :  "GET",
            headers: {
            authorization: `Bearer ${localStorage.getItem("accessToken")}`,

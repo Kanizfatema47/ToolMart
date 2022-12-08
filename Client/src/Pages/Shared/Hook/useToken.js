@@ -9,7 +9,7 @@ console.log(user)
 
         const currentuser = { email };
         if (email) {
-            fetch(`http://localhost:5000/users/${email}`, {
+            fetch(`/users/${email}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json",
